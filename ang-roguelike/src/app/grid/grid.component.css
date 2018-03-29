@@ -1,0 +1,11 @@
+.square {
+  border: 1px solid black;
+  height: 75px;
+  width: 100%;
+}
+.apple {
+  background-color: red;
+}
+.player {
+  background-color: blue;
+}

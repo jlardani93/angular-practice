@@ -1,0 +1,13 @@
+<p>
+  grid works!
+</p>
+<!-- <script type="text/javascript">
+window.addEventListener("keydown", onKeyDown, false);
+</script> -->
+<div (keydown)="onKeyDown($event)" class="container">
+  <input type="text" maxlength="0">
+  <div class="row" *ngFor="let thisRow of myGrid; let i=index" [attr.data-index]="i">
+    <div [class]="renderBox(i, j)" *ngFor="let thisColumn of thisRow; let j=index" [attr.data-index]="j">
+    </div>
+  </div>
+</div>

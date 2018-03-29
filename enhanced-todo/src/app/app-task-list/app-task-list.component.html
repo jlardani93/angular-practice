@@ -1,0 +1,17 @@
+<select (change)="onChange($event.target.value)">
+  <option value="allTasks">All Tasks</option>
+  <option value="completedTasks">Completed Tasks</option>
+  <option value="incompleteTasks" selected="selected">Incomplete Tasks</option>
+</select>
+
+
+<ul>
+  <div *ngFor="let task of childTaskList | completeness:filterByCompleteness">
+    <h2>{{task.description}}</h2>
+    <h3>Due Date: {{task.dueDate}}</h3>
+    <input *ngIf="task.complete === true" type="checkbox" checked (click)="toggleComplete(task, false)"/>
+    <input *ngIf="task.complete === false" type="checkbox" (click)="toggleComplete(task, true)"/>
+    <hr>
+    <button type="button" (click)="setCurrentTask(task)">Edit</button>
+  </div>
+</ul>

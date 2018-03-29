@@ -1,0 +1,3 @@
+<app-task-form (sendTask)="addTask($event)"></app-task-form>
+<app-task-list [childTaskList]="masterTaskList" (assignCurrentTask)="this.currentTask = $event; this.getCurrentTask()"></app-task-list>
+<app-task-update [childCurrentTask]="currentTask"></app-task-update>

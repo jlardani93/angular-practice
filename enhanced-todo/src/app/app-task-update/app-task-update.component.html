@@ -1,0 +1,15 @@
+<div *ngIf="childCurrentTask">
+  <h3>Update Current Task</h3>
+  <hr>
+  <form>
+    <div>
+      <label>New Description: </label>
+      <input #updatedDescription type="text" name="updatedDescription" value="{{childCurrentTask.description}}">
+    </div>
+    <div>
+      <label>New Due Date: </label>
+      <input #updatedDueDate type="date" name="updatedDueDate" value="" value="{{childCurrentTask.dueDate}}">
+    </div>
+    <button type="button" (click)="updateTask(updatedDescription.value, updatedDueDate.value); updatedDescription.value = ''; childCurrentTask.value = '';">Update!!!</button>
+  </form>
+</div>

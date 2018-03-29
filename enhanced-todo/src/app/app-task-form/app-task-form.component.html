@@ -1,0 +1,12 @@
+
+<form>
+  <div class="">
+    <label>Input a Description for New Task</label>
+    <input #newDescription type="text" name="newDescription">
+  </div>
+  <div>
+    <label>Input Due Date</label>
+    <input #newDate type="date" name="newDate" value="">
+  </div>
+  <button type="button" (click)="newTask(newDescription.value, newDate.value); newDescription.value = '';">Submit!</button>
+</form>
